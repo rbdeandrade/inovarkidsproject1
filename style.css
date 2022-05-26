@@ -25,6 +25,12 @@
 
 .container {
   background: #fff;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+
 }
   
 .say-hi-btn {
@@ -34,7 +40,7 @@
     background: var(--color-blue);
     color: white;
     width: 10em;
-    height: 5em;
+    height: 3em;
   }
 
 .say-hi-btn:hover {
