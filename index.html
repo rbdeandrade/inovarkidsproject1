@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AR • InovARkids</title>
+    <meta name="description" content="AR • InovARkids">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    
+    <!-- Style / Btn click -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Gesture -->
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+
+    <!-- Scene -->
+
+    <a-scene
+        embedded
+        arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'
+        renderer="logarithmicDepthBuffer: true;"
+        vr-mode-ui="enabled: false"
+        gesture-detector
+        id="scene"
+    >
+
+    <!-- Objects -->
+
+        <a-assets>
+            <a-asset-item id='arduino-obj' src='./res/Ardi_UNO.obj'></a-asset-item>
+            <a-asset-item id='arduino-mtl' src='./res/Ardi_UNO.mtl'></a-asset-item>
+        </a-assets>
+
+    <!-- Marker -->
+
+        <a-marker
+            type='barcode'
+            value='31'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="arduinoUno"
+        >
+            <a-entity
+                obj-model='obj: #arduino-obj; mtl: #arduino-mtl;'
+                scale="0.2 0.2 0.2"
+                rotation='0 0 0'
+                position='0 0 0'
+                class="clickable"
+                gesture-handler="minScale: 0.1; maxScale: 10"
+            >
+            </a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+
+    <!-- Button -->
+    <div class="btn">
+        <button class="say-hi-btn">Olá (:</button>
+    </div>
+
+</body>
+</html>
