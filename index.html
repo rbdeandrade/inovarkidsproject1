@@ -35,6 +35,14 @@
         <a-assets>
             <a-asset-item id='arduino-obj' src='./res/Ardi_UNO.obj'></a-asset-item>
             <a-asset-item id='arduino-mtl' src='./res/Ardi_UNO.mtl'></a-asset-item>
+
+            <img id="my-image" src="./res/project/completed.png">
+            <img id="my-image" src="./res/project/breadboard.png">
+            <img id="my-image" src="./res/project/buttons.png">
+            <img id="my-image" src="./res/project/wires.png">
+            <img id="my-image" src="./res/project/resistors.png">
+            <img id="my-image" src="./res/project/speaker.png">
+            <img id="my-image" src="./res/project/placa.png">
         </a-assets>
 
     <!-- Marker -->
@@ -56,6 +64,78 @@
                 gesture-handler="minScale: 0.1; maxScale: 10"
             >
             </a-entity>
+        </a-marker>
+
+
+        <a-marker
+            type='barcode'
+            value='0'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="arduinoUno"
+        >
+        <a-image src="#completed"></a-image>
+        </a-marker>
+        <a-marker
+            type='barcode'
+            value='1'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="arduinoUno"
+        >
+        <a-image src="#breadboard"></a-image>
+        </a-marker>
+        <a-marker
+            type='barcode'
+            value='2'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="arduinoUno"
+        >
+        <a-image src="#buttons"></a-image>
+        </a-marker>
+        <a-marker
+            type='barcode'
+            value='3'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="arduinoUno"
+        >
+        <a-image src="#wires"></a-image>
+        </a-marker>
+        <a-marker
+            type='barcode'
+            value='4'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="arduinoUno"
+        >
+        <a-image src="#resistors"></a-image>
+        </a-marker>
+        <a-marker
+            type='barcode'
+            value='5'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="arduinoUno"
+        >
+        <a-image src="#speaker"></a-image>
+        </a-marker>
+        <a-marker
+            type='barcode'
+            value='6'
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+            id="arduinoUno"
+        >
+        <a-image src="#placa"></a-image>
         </a-marker>
 
         <a-entity camera></a-entity>
