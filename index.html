@@ -10,13 +10,13 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     
     <!-- Style / Btn click -->
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <link rel="stylesheet" href="style.css">
     
     <!-- Gesture -->
     <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 </head>
-<body style='margin : 0px; overflow: hidden;'>
+<body style='margin : 0px; overflow: hidden;' class="background">
 
     <!-- Scene -->
 
@@ -62,16 +62,111 @@
 
     <!-- Steps -->
     
-    <div class="stepsCard">
+    <div class="stepsCards">
         <div class="card">
             <img src="./res/keyboard_instrument.png" alt="step1" class="stepImg">
             <div class="container">
               <h4><b>Passo 1</b></h4>
-              <p>Architect & Engineer</p>
+              <p>
+                  Vamos iniciar o teu primeiro projeto Arduino.
+                  Coloca os fios amarelos e laranja na placa,
+                  nas coordenadas indicadas na imagem.
+              </p>
             </div>
-            <button class="say-hi-btn">Olá (:</button>
-          </div>
+        </div>
+        <div class="card">
+            <img src="./res/keyboard_instrument.png" alt="step1" class="stepImg">
+            <div class="container">
+              <h4><b>Passo 2</b></h4>
+              <p>
+                  Coloca os 4 botões nas coordenadas junto aos fios amarelos.
+              </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./res/keyboard_instrument.png" alt="step1" class="stepImg">
+            <div class="container">
+              <h4><b>Passo 3</b></h4>
+              <p>
+                  Coloca os restantes fios, das 4 cores, nas respetivas coordenadas.
+              </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./res/keyboard_instrument.png" alt="step1" class="stepImg">
+            <div class="container">
+              <h4><b>Passo 4</b></h4>
+              <p>
+                  Coloca a campainha, nas coordenadas B2 e B8.
+              </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./res/keyboard_instrument.png" alt="step1" class="stepImg">
+            <div class="container">
+              <h4><b>Passo 5</b></h4>
+              <p>
+                  Coloca as 4 resistências nas respetivas coordenadas. Repara que duas são iguais.
+              </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./res/keyboard_instrument.png" alt="step1" class="stepImg">
+            <div class="container">
+              <h4><b>Passo 6</b></h4>
+              <p>Liga os 4 fios à placa Arduino, conforme a imagem final.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./res/keyboard_instrument.png" alt="step1" class="stepImg">
+            <div class="container">
+              <h4><b>Passo 7</b></h4>
+              <p>Construíste o teu primeiro projeto, carrega nos botões e houve o som do teclado musical.</p>
+            </div>
+        </div>
     </div>
 
+    <div class="centerCards">
+        <div class="btnCards">
+          <button class="nextBtn" onclick="plusDivs(-1)">❮ Anterior</button>
+          <button class="nextBtn" onclick="plusDivs(1)">Próximo ❯</button>
+        </div>
+        <button class="stepsBtn curentStepBtn" onclick="currentDiv(1)">1</button> 
+        <button class="stepsBtn curentStepBtn" onclick="currentDiv(2)">2</button> 
+        <button class="stepsBtn curentStepBtn" onclick="currentDiv(3)">3</button>
+        <button class="stepsBtn curentStepBtn" onclick="currentDiv(4)">4</button> 
+        <button class="stepsBtn curentStepBtn" onclick="currentDiv(5)">5</button> 
+        <button class="stepsBtn curentStepBtn" onclick="currentDiv(6)">6</button> 
+        <button class="stepsBtn curentStepBtn" onclick="currentDiv(7)">7</button> 
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("card");
+          var dots = document.getElementsByClassName("stepsBtn");
+          if (n > x.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" curentStepBtn", "");
+          }
+          x[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " curentStepBtn";
+        }
+    </script>
 </body>
 </html>

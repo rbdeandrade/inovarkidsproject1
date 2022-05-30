@@ -11,13 +11,22 @@ body {
   background: #545554;
 }
 
-.stepsCard {
+.stepsCards {
     position: absolute;
     width: 80%;
     z-index: 10;
     bottom: 10%;
     left: 10%;
     border-radius: 5%;
+  }
+
+.centerCards {
+    position: absolute;
+    width: 80%;
+    z-index: 10;
+    bottom: 5%;
+    left: 10%;
+    text-align: center;
   }
 
 .stepImg {
@@ -27,9 +36,9 @@ body {
 .container {
   background: #fff;
   text-align: left;
-  padding: 0.5% 0% 1% 5%;
+  padding: 0.5% 1% 1% 5%;
   border-radius: 25px 25px 10px 5px;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   margin-top: 5%;
 }
 
@@ -37,8 +46,8 @@ body {
   text-align: center;
 }
   
-.say-hi-btn {
-    padding: 0.25em;
+.nextBtn {
+    padding: 0.5em;
     border-radius: 10px;
     border: none;
     background: var(--color-blue);
@@ -47,7 +56,34 @@ body {
     height: 3em;
   }
 
-.say-hi-btn:hover {
+.nextBtn:hover {
     background: var(--color-pink);
     color: white;
   }
+
+.stepsBtn {
+    border-radius: 1px;
+    border: none;
+    background: var(--color-gray);
+    color: white;
+    width: 3em;
+    height: 3em;
+    margin-top: 1em;
+  }
+
+.stepsBtn:hover {
+    border-radius: 10px;
+    border: none;
+    background: var(--color-pink);
+    color: white;
+    height: 3em;
+  }
+
+.curentStepBtn {
+  border-radius: 10px;
+    border: none;
+    background: var(--color-pink);
+    color: white;
+    width: 3em;
+    height: 3em;
+}
