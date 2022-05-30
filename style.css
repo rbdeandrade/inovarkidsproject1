@@ -62,7 +62,7 @@ body {
   }
 
 .stepsBtn {
-    border-radius: 1px;
+    border-radius: 10px;
     border: none;
     background: var(--color-gray);
     color: white;
