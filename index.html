@@ -73,7 +73,7 @@
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
-            id="completed"
+            id="completed1"
         >
         <a-image src="#completed"></a-image>
         </a-marker>
@@ -83,7 +83,7 @@
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
-            id="breadboard"
+            id="breadboard1"
         >
         <a-image src="#breadboard"></a-image>
         </a-marker>
@@ -93,7 +93,7 @@
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
-            id="buttons"
+            id="buttons1"
         >
         <a-image src="#buttons"></a-image>
         </a-marker>
@@ -103,7 +103,7 @@
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
-            id="wires"
+            id="wires1"
         >
         <a-image src="#wires"></a-image>
         </a-marker>
@@ -113,7 +113,7 @@
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
-            id="resistors"
+            id="resistors1"
         >
         <a-image src="#resistors"></a-image>
         </a-marker>
@@ -123,7 +123,7 @@
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
-            id="speaker"
+            id="speaker1"
         >
         <a-image src="#speaker"></a-image>
         </a-marker>
@@ -133,7 +133,7 @@
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
-            id="placa"
+            id="placa1"
         >
         <a-image src="#placa"></a-image>
         </a-marker>
@@ -141,17 +141,15 @@
         <a-entity camera></a-entity>
     </a-scene>
 
-    <!-- Button -->
-    
-    <div class="btn">
-      <button class="info">Dúvidas?</button>
-    </div>
-
     <!-- Steps -->
     
     <div class="stepsCards">
         <div class="card">
             <img src="./res/targets/00.png" alt="step1" class="stepImg">
+            <!-- Button -->
+            <div class="btn">
+              <button class="info">Dúvidas?</button>
+            </div>
             <div class="container">
               <h4><b>Passo 1</b></h4>
               <audio id="player">
