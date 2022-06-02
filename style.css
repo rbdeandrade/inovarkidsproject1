@@ -98,7 +98,7 @@ body {
   z-index: 10;
 }
 
-.say-hi-btn {
+.info {
   padding: 0.25em;
   border-radius: 10px;
   margin-right: 25px;
@@ -109,7 +109,7 @@ body {
   height: 2.5em;
 }
 
-.say-hi-btn:hover {
+.info:hover {
   background: var(--color-pink);
   color: white;
 }
